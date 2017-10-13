@@ -1,5 +1,18 @@
-<% @posts.each do |post| %>
-  <ul>
-    <li><%= post.title %></li>
-  </ul>
-<% end %>
+<nav>
+  <h1>Hacker News</h1>
+  <span>new | comments | popular | login</span>
+</nav>
+<main>
+  <ol>
+  <% @posts.each do |post| %>
+    <li>
+      <p class="post-title"><%= post.title %></p>
+      <span class="post-details"><%= post.points %> points </span>
+      <span class="post-details">by <%= post.username %> </span>
+      <span class="post-details"><%= post.time_since_creation %> hours ago </span>
+      <span class="post-details">| <a href="/posts/hide/<%= post.id %>">hide</a> | </span>
+      <span class="post-details"><%= post.comment_count %> comments</span>
+    </li>
+  <% end %>
+</ol>
+</main>
