@@ -28,6 +28,11 @@ main {
   background-color: #F6F5F0;
   width: 100%;
   margin-top: 0;
+  color: #828282;
+}
+
+main > ol > li > span >  a {
+  color: #828282;
 }
 
 h1 {
@@ -37,11 +42,11 @@ h1 {
 .post-title {
   font-size: 12px;
   margin-bottom: 0;
+  color: #000;
 }
 
 .post-details {
   font-size: 9px;
-  color: #828282;
 }
 
 @media only screen and (min-width: 768px) {
